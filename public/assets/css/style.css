@@ -1,13 +1,23 @@
-li {
+/* li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
-}
+} */
 
+.center{
+  text-align: center;
+}
 .label {
   font-weight: bold;
 }
 
+.center .card-undevoured{
+  display: inline-block;
+  width: 70%;
+}
+.card .li-inactive{
+  background-color: #F3F3F3;
+}
 .create-update-form {
   padding: 5px;
   margin: 5px;

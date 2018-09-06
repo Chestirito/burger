@@ -14,7 +14,7 @@ $(function() {
       data: newDevourState
     }).then(
       function() {
-        console.log("changed sleep to", newDevour);
+        console.log("changed sleep to ", newDevour);
         // Reload the page to get the updated list
         location.reload();
       }
