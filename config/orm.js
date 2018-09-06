@@ -13,22 +13,23 @@ var orm = {
   },
   insertOne: function(input) {
     return new Promise(function(resolve,reject){
-      var queryString = "INSERT INTO burgers(burger_name) VALUES ?";
+        var queryString = "INSERT INTO burgers(burger_name) VALUES (?)";
 
-      connection.query(queryString, [input], function(err, result) {
-        if (err) reject(err);
-        resolve(result);
-      });
+        connection.query(queryString, input, function(err, result) {
+            if (err) reject(err);
+            resolve(result);
+        });
     })
   },
   updateOne: function(match) {
     return new Promise(function(resolve,reject){
-      var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
+        
+        var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
 
-      connection.query(queryString, [match], function(err, result) {
-        if (err) reject(err);
-        resolve(result);
-      });
+        connection.query(queryString, [match], function(err, result) {
+            if (err) reject(err);
+            resolve(result);
+        });
     })
   }
 
