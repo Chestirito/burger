@@ -5,8 +5,10 @@ var burger = {
     selectAll: function() {
         return new Promise(function(resolve,reject){
             orm.selectAll().then(function(result){
-               
+                
                 resolve(result);
+            }).catch(function(result){
+                reject(result);
             });
         })
     },
@@ -16,6 +18,8 @@ var burger = {
             orm.insertOne(input).then(function(result){
                 
                 resolve(result);
+            }).catch(function(result){
+                reject(result);
             });
         });
     },
@@ -24,6 +28,8 @@ var burger = {
             orm.updateOne(input).then(function(result){
                 
                 resolve(result);
+            }).catch(function(result){
+                reject(result);
             });
         });
     }
